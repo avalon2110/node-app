@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/tours/edit/'+tour.id)
+    #form-group
+      label Title:
+      input.form-control(name='title', type='text', value=tour.title)
+    #form-group
+      label Company:
+      input.form-control(name='company', type='text', value=tour.company)
+    #form-group
+      label Body:
+      textarea.form-control(name='body', type='text',)= tour.body
+    br
+    input.btn.btn-primary(type='submit', value="Submit")

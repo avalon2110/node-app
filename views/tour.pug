@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= tour.title
+  h5 Added by #{tour.company}
+  p= tour.body
+  hr
+  a.btn.btn-primary(href='/tour/edit/' + tour._id) Edit 
+  a#delete_tour.btn.btn-danger(href='#', data-id=tour._id) Delete
